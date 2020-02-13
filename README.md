@@ -1,6 +1,8 @@
-# Twig Bundle Installer for Composer
+# Twig Bundle Installer plugin for Composer
 
-A Composer plugin that installs & manages Twig Bundles in your `templates/` directory
+A Composer plugin that installs & manages Twig Bundles in your `templates/vendor/` directory
+
+![Screenshot](./resources/twig-bundle.png)
 
 ## Overview
  
@@ -22,10 +24,10 @@ This allows you to install and update Twig templates across multiple projects in
 
 ## Potential uses for Twig Bundle Installer
 
-* Take your Twig snippets out of a bunch of gists, and into a Composer package that anyone can install
-* Move boilerplate from "starter kits" into versionable Twig bundles that can be updated across multiple projects easily
-* Distribute your plugin "example templates" in a more convenient, formalized manner
-* Create platform-agnostic macros that do things like responsive image `srcset` code, and share it with others
+* Take your Twig snippets out of a bunch of gists, and into a Composer package that anyone can install & use
+* Move boilerplate from monolithic "starter kits" into versionable Twig bundles that can be updated across multiple projects easily
+* Distribute your plugin "example templates" in a more convenient, formalized, versionable manner
+* Create platform-agnostic macros that do things like responsive image `srcset` code, and share them with others
 * Keep documentation and other support files together in the Twig Bundle, just like any Composer package
 * ...and more...
 
