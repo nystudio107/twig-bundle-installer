@@ -6,30 +6,20 @@ A Composer plugin that installs & manages Twig Bundles in your `templates/vendor
 
 ## Overview
  
-Twig Bundle Installer is a Composer installer that installs & manages Twig Bundles in your `templates/` directory.
+Twig Bundle Installer is a Composer installer that installs and manages Twig Bundles in your `templates/` directory. It introduces the concept of Twig _bundles_ and installs them in `templates/vendor/`, similarly to how you’d normally install PHP packages in `vendor/`. (And it doesn’t change anything about that; your PHP bundles will still live in `vendor`.)
  
- It implements a new Composer package type named `twig-bundle`, which should be used when publishing Twig Bundles.
-
-Composer manages it all, and Twig Bundle Installer is not tied to any particular CMS or system. Anything that uses Twig might find it useful.
-
-You end up with your PHP packages as normal in:
-
-`vendor/`
-
-And your Twig Bundles in:
-
-`templates/vendor/`
+It implements a new Composer package type named `twig-bundle`, which should be used when publishing Twig Bundles. Composer manages it all, and Twig Bundle Installer is not tied to any particular CMS or system. Anything that uses Twig might find it useful.
 
 This allows you to install and update Twig templates across multiple projects in a managed way.
 
-## Potential uses for Twig Bundle Installer
+## Why Though?
 
-* Stop copying useful bits of Twig between projects; include them easily and keep them *all* up to date.
-* Share useful Twig components with other developers and teams in whatever projects you want.
-* Reuse these same bits anywhere you use Twig; Craft CMS, Laravel, Statamic, and beyond.
-* Improve your documentation once your base components all live together in one place.
-* Distribute your Craft plugin’s sample templates in a more convenient, flexible, and versionable way.
-* Utilize *template* dependencies as easily as PHP packages.
+- Stop copying useful bits of Twig between projects; include them easily and keep them *all* up to date.
+- Share useful Twig components with other developers and teams in whatever projects you want.
+- Reuse these same bits anywhere you use Twig; Craft CMS, Laravel, Statamic, and beyond.
+- Improve your documentation once your base components all live together in one place.
+- Distribute your Craft plugin’s sample templates in a more convenient, flexible, and versionable way.
+- Utilize *template* dependencies as easily as PHP packages.
 
 ## Why Twig Bundle Installer?
 
