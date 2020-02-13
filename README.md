@@ -183,5 +183,6 @@ Some ideas:
 * The templates directory shouldn't be hard-coded
 * Bundles could include CSS and JavaScript that the installer builds a `manifest.json` for something else to consume
 * Framework specific tools could compliment Twig Bundle Installer by automatically publishing bundles on the frontend
+* Technically, the technique described here would work fine for [Antlers](https://docs.statamic.com/antlers) or [Blade](https://laravel.com/docs/5.8/blade) and other templating systems as well.
 
 Brought to you by [nystudio107](https://nystudio107.com/)
