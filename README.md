@@ -166,6 +166,7 @@ To create a Twig Bundle, create a directory with a `Composer.json` file in it th
   "minimum-stability": "stable"
 }
 ```
+
 ...but obviously change the `name` to your `vendor/bundle` name, and fill in your own description, etc. The key is that you must have the `type` set to `twig-bundle`:
 
 ```
@@ -175,6 +176,8 @@ To create a Twig Bundle, create a directory with a `Composer.json` file in it th
 You'll then want to publish this to a [GitHub](https://github.com/) or other Git repo, publish it on [Packagist.org](https://packagist.org/) so others can install it via Composer
 
 If you've never published a package on Packagist before, just follow the instructions on [Packagist.org](https://packagist.org/) or read the [Packagist and the PHP ecosystem](https://www.bugsnag.com/blog/packagist-and-the-php-ecosystem) article.
+
+You can use the [Test Twig Bundle](https://github.com/nystudio107/test-twig-bundle) as an example to follow.
 
 ## Twig Bundle Installer Roadmap
 
