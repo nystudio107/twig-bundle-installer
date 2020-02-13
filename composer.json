@@ -1,5 +1,5 @@
 {
-  "name": "nystudio107/bundle-installer",
+  "name": "nystudio107/twig-bundle-installer",
   "description": "Install, update, and manage Twig template bundles via Composer",
   "version": "1.0.0",
   "keywords": [
@@ -15,9 +15,9 @@
   "type": "composer-plugin",
   "support": {
     "email": "info@nystudio107.com",
-    "issues": "https://github.com/nystudio107/bundle-installer/issues",
-    "source": "https://github.com/nystudio107/bundle-installer",
-    "docs": "https://github.com/nystudio107/bundle-installer"
+    "issues": "https://github.com/nystudio107/twig-bundle-installer/issues",
+    "source": "https://github.com/nystudio107/twig-bundle-installer",
+    "docs": "https://github.com/nystudio107/twig-bundle-installer"
   },
   "license": "MIT",
   "minimum-stability": "stable",
