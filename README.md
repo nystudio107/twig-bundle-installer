@@ -76,7 +76,7 @@ templates/vendor
         ├── composer.json
         ├── LICENSE.md
         ├── README.md
-        └── src
+        └── templates
             ├── fizz-buzz.twig
             ├── elementary-my-dear-watson.twig
             └── five-minute-read.twig
@@ -89,6 +89,12 @@ This means that you can install & update these Twig Bundles across multiple proj
 It works just like any Composer package does, because Bundle Installer is just a layer on top of Composer that routes packages of the type `twig-bundle` to a different directory.
 
 Commands you're used to such as `composer require`, `composer update`, etc. all work as you'd expect.
+
+Example including a template from the bundle:
+
+```twig
+{% include 'vendor/nystudio107/test-bundle/templates/fizz-buzz.twig' %}
+```
 
 #### Twig Bundle Considerations
 
