@@ -20,6 +20,15 @@ And your Twig Bundles in:
 
 This allows you to install and update Twig templates across multiple projects in a managed way.
 
+## Potential uses for Twig Bundle Installer
+
+* Take your Twig snippets out of a bunch of gists, and into a Composer package that anyone can install
+* Move boilerplate from "starter kits" into versionable Twig bundles that can be updated across multiple projects easily
+* Distribute your plugin "example templates" in a more convenient, formalized manner
+* Create platform-agnostic macros that do things like responsive image `srcset` code, and share it with others
+* Keep documentation and other support files together in the Twig Bundle, just like any Composer package
+* ...and more...
+
 ## Why Twig Bundle Installer?
 
 I'd originally thought of the idea implemented in Twig Bundle Installer when working on re-usable Twig components.
@@ -29,8 +38,6 @@ Later the idea came up again when I worked on a base Twig templating layer as di
 Then it idea came up _again_ when discussing with a colleague how they managed multiple brand properties in a large [Craft CMS](https://craftcms.com) install via separate plugins. Each brand site had its own custom plugin which was mostly a wrapper for the templates needed for said site.
 
 So if something comes up 3x or more, I think it's probably worth trying out…
-
-## What would I use Twig Bundle Installer?
 
 ## Using Twig Bundle Installer
 
@@ -92,7 +99,7 @@ It works just like any Composer package does, because Twig Bundle Installer is j
 
 Commands you're used to such as `composer require`, `composer update`, etc. all work as you'd expect.
 
-Example including a template from the bundle:
+Example including a template from a Twig Bundle:
 
 ```twig
 {% include 'vendor/nystudio107/test-twig-bundle/templates/fizz-buzz.twig' %}
@@ -104,6 +111,12 @@ Since Twig Bundle Installer is looking for a directory in your project root name
 
 * If you store your templates somewhere else, for now you must create a symlink or alias from `templates/` to where you store your templates
 * If you exclude your `vendor/` directory from your Git repo, you probably would want to add `templates/vendor/` to your `.gitignore` as well
+
+Example `.gitignore` file:
+```
+/vendor
+/templates/vendor
+```
 
 #### Local Repositories
 
@@ -128,7 +141,38 @@ If you want to use local Twig Bundles while you work on them, you can do that vi
 
 ```
 
+Where the `url` setting is a path to where your source Twig Bundles live.
+
+
 ### Creating Twig Bundles
+
+To create a Twig Bundle, create a directory with a `Composer.json` file in it that looks like this:
+```json
+{
+  "name": "nystudio107/test-twig-bundle",
+  "description": "Test bundle of Twig templates for Bundle Installer",
+  "version": "1.0.0",
+  "keywords": [
+    "twig",
+    "twig-bundle",
+    "composer",
+    "installer",
+    "bundle"
+  ],
+  "type": "twig-bundle",
+  "license": "MIT",
+  "minimum-stability": "stable"
+}
+```
+...but obviously change the `name` to your `vendor/bundle` name, and fill in your own description, etc. The key is that you must have the `type` set to `twig-bundle`:
+
+```
+  "type": "twig-bundle",
+```
+
+You'll then want to publish this to a [GitHub](https://github.com/) or other Git repo, publish it on [Packagist.org](https://packagist.org/) so others can install it via Composer
+
+If you've never published a package on Packagist before, just follow the instructions on [Packagist.org](https://packagist.org/) or read the [Packagist and the PHP ecosystem](https://www.bugsnag.com/blog/packagist-and-the-php-ecosystem) article.
 
 ## Twig Bundle Installer Roadmap
 
