@@ -18,7 +18,7 @@ This allows you to install and update Twig templates across multiple projects in
 
 - Stop copying useful bits of Twig between projects; include them easily and keep them *all* up to date.
 - Share useful Twig components with other developers and teams in whatever projects you want.
-- Reuse these same bits anywhere you use Twig; Craft CMS, Laravel, Statamic, and beyond.
+- Reuse these same bits anywhere you use Twig; Craft CMS, Drupal, Grav, Symphony... even Laravel, Statamic, and beyond.
 - Improve your documentation once your base components all live together in one place.
 - Distribute your Craft plugin’s sample templates in a more convenient, flexible, and versionable way.
 - Utilize *template* dependencies as easily as PHP packages.
