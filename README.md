@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nystudio107/twig-bundle-installer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nystudio107/twig-bundle-installer/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/nystudio107/twig-bundle-installer/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nystudio107/twig-bundle-installer/build-status/master) [![Code Intelligence Status](https://scrutinizer-ci.com/g/nystudio107/twig-bundle-installer/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
 # Twig Bundle Installer plugin for Composer
 
 A Composer plugin that installs & manages Twig Bundles in your `templates/vendor/` directory
