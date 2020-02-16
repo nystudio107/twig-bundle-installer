@@ -103,6 +103,7 @@ Example including a template from a Twig Bundle:
 
 Since Twig Bundle Installer is looking for a directory in your project root named `templates/` that points to your Twig templates directory:
 
+* You should treat the `templates/vendor/` directory as **read only** just like you do the `vendor/` directory
 * If you store your templates somewhere else, for now you must create a symlink or alias from `templates/` to where you store your templates
 * If you exclude your `vendor/` directory from your Git repo, you probably would want to add `templates/vendor/` to your `.gitignore` as well
 
