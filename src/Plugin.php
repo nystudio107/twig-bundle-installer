@@ -3,7 +3,7 @@
  * Twig Bundle Installer
  *
  * @link      https://nystudio107.com/
- * @copyright Copyright (c) 2020 nystudio107
+ * @copyright Copyright (c) 2023 nystudio107
  */
 
 namespace nystudio107\composer;
@@ -18,11 +18,19 @@ use Composer\Plugin\PluginInterface;
  * Plugin is the Composer plugin that handles packages of the type: twig-bundle
  *
  * @author    nystudio107
- * @package   bundle-installer
- * @since     1.0.0
+ * @package   twig-bundle-installer
+ * @since     1.1.0
  */
 class Plugin implements PluginInterface
 {
+    // Private Properties
+    // =========================================================================
+
+    /**
+     * @var Installer
+     */
+    private $installer;
+
     // Public Methods
     // =========================================================================
 
@@ -32,7 +40,23 @@ class Plugin implements PluginInterface
     public function activate(Composer $composer, IOInterface $io)
     {
         // Register the plugin installer
-        $installer = new Installer($io, $composer);
-        $composer->getInstallationManager()->addInstaller($installer);
+        $this->installer = new Installer($io, $composer, Installer::TWIG_BUNDLE_PACKAGE_TYPE);
+        $composer->getInstallationManager()->addInstaller($this->installer);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+        $composer->getInstallationManager()->removeInstaller($this->installer);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
     }
 }
+
