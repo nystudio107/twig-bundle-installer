@@ -44,10 +44,21 @@ To use Twig Bundles in your own project, first you need to add Twig Bundle Insta
 ```json
 {
   "require": {
-    "nystudio107/twig-bundle-installer": "^1.0.0",
+    "nystudio107/twig-bundle-installer": "^1.0.0"
   }
 }
+```
 
+Because Twig Bundle Installer is a Composer plugin, you will also need to tell Composer that's it okay to use this plugin via [`config:allow-plugins`](https://getcomposer.org/doc/06-config.md#allow-plugins) in your `composer.json` file:
+
+```json
+{
+  "config": {
+    "allow-plugins": {
+      "nystudio107/twig-bundle-installer": true
+    }
+  }
+}
 ```
 
 Then you can add in the vendor/package name of the Twig Bundle you want to use just like you would any Composer package:
