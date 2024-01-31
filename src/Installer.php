@@ -31,8 +31,8 @@ class Installer extends BaseLibraryInstaller
     // Constants
     // =========================================================================
 
-    const TEMPLATES_VENDOR_DIR = './templates/vendor';
-    const TWIG_BUNDLE_PACKAGE_TYPE = 'twig-bundle';
+    public const TEMPLATES_VENDOR_DIR = './templates/vendor';
+    public const TWIG_BUNDLE_PACKAGE_TYPE = 'twig-bundle';
 
     // Public Methods
     // =========================================================================
