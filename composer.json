@@ -27,9 +27,7 @@
   },
   "require-dev": {
     "composer/composer": "^1.0 || ^2.0",
-    "craftcms/ecs": "dev-main",
-    "craftcms/phpstan": "dev-main",
-    "craftcms/rector": "dev-main"
+    "craftcms/ecs": "dev-main"
   },
   "scripts": {
     "phpstan": "phpstan --ansi --memory-limit=1G",
