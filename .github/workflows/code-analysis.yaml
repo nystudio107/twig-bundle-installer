@@ -22,7 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # see https://github.com/php-actions/composer
       - name: Cache Composer dependencies
         uses: actions/cache@v4
         with:
@@ -31,5 +30,4 @@ jobs:
       - uses: php-actions/composer@v6
         with:
           php_version: 8.2
-          php_extensions: ctype curl dom iconv imagick intl json mbstring openssl pcre pdo reflection spl zip
       - run: ${{ matrix.actions.run }}
