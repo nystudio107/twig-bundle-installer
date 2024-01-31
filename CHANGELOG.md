@@ -1,6 +1,15 @@
 Changelog
 =========
 
+## 1.1.1 - 2024.01.31
+### Added
+* Add `phpstan` and `ecs` code linting
+* Add `code-analysis.yaml` GitHub action
+
+### Changed
+* PHPstan code cleanup
+* ECS code cleanup
+
 ## 1.1.0 - 2023-02-19
 ### Added
 * Added support for Composer 2.x
