@@ -42,7 +42,7 @@ class Installer extends BaseLibraryInstaller
     /**
      * @inheritdoc
      */
-    public function __construct(IOInterface $io, Composer $composer, $type = self::TWIG_BUNDLE_PACKAGE_TYPE, Filesystem $filesystem = null, BinaryInstaller $binaryInstaller = null)
+    public function __construct(IOInterface $io, Composer $composer, $type = self::TWIG_BUNDLE_PACKAGE_TYPE, ?Filesystem $filesystem = null, ?BinaryInstaller $binaryInstaller = null)
     {
         parent::__construct($io, $composer, $type, $filesystem, $binaryInstaller);
         // Load dotenv?
